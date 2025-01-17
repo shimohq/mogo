@@ -71,6 +71,30 @@
                 ]
             }
         },
+        "/api/share/{s-code}": {
+            "get": {
+                "description": "ShortURLRedirect",
+                "operationId": "base.ShortURLRedirect",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "s-code",
+                        "required": true,
+                        "schema": {
+                            "title": "s-code",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "301": {}
+                },
+                "summary": "获取短链接",
+                "tags": [
+                    "LOGSTORE"
+                ]
+            }
+        },
         "/api/v1/alarms": {
             "get": {
                 "description": "alarm",
@@ -2359,6 +2383,16 @@
                 "summary": "告警配置更新",
                 "tags": [
                     "ALARM"
+                ]
+            }
+        },
+        "/api/v2/base/install/local": {
+            "get": {
+                "description": "instance",
+                "operationId": "base.ListUser",
+                "responses": {},
+                "tags": [
+                    "User"
                 ]
             }
         },
